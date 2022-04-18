@@ -1,0 +1,13 @@
+<p>La Cantidad {{myShoppingCart.length}}</p>
+<p>Total: ${{total}}</p>
+<p>Today: {{today | date: 'short'}}</p>
+<p>Today: {{today | timeAgo}}</p>
+<p>Today: {{otrafecha | date: 'yyyy.MM.dd'}}</p>
+<p>{{'aron delgado espárraga'|uppercase}}</p>
+<div class="products--grid">
+  <servicios-product
+    [product]="product1"
+    *ngFor="let product1 of Product"
+    (addedProduct)="onAddToShoppingCart($event)"
+  ></servicios-product>
+</div>
